@@ -1,0 +1,26 @@
+<div class='task <%= task.completed ? "completed" : "incomplete" %>' id="task_<%= task.id %>">
+
+  <p>
+    <%= task.description %>
+  </p>
+
+  <% if current_user == task.list.user %>
+    <div class='options'>
+      <%= link_to 'Edit', edit_task_path(task.list, task), class: 'btn btn-primary' %>
+      
+      <%= form_for(task, remote: true) do |f| %>
+        <%= f.hidden_field :completed, value: !task.completed %>
+        <%= f.submit (task.completed ? 'Not Done' : 'Done'), class: 'btn btn-primary' %>
+      <% end %>
+
+      <%= link_to 'Delete', task, 
+                            remote: true,
+                            method: :delete, 
+                            data: { confirm: 'Are you sure?' },
+                            class: 'btn btn-danger' %>
+    </div>
+  <% end %>
+  
+
+  <div class='clear'></div>
+</div>

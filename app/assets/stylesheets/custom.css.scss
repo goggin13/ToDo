@@ -1,0 +1,56 @@
+@import "bootstrap";
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+.task {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.task.completed {
+  background-color: lightgreen;
+}
+
+.task.incomplete{
+  background-color: salmon;
+}
+
+a.btn:visited { color: #333; }
+
+a.btn-danger:visited { color: #fff; }
+
+a.btn-primary:visited { color: #fff; }
+
+.options a,
+.options input {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
