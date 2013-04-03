@@ -12,7 +12,8 @@ gem 'bootstrap-will_paginate'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
-  gem 'capybara'
+  gem 'capybara', '~> 1.1.2'
+  gem 'launchy'
 end
 
 group :production do

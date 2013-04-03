@@ -1,5 +1,7 @@
 <h1>Listing lists</h1>
 
+<%= will_paginate @lists %>
+
 <table>
   <tr>
     <th>Title</th>
@@ -21,5 +23,7 @@
 </table>
 
 <br />
+
+<%= will_paginate @lists %>
 
 <%= link_to 'New List', new_list_path %>

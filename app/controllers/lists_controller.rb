@@ -2,7 +2,7 @@ class ListsController < ApplicationController
   # GET /lists
   # GET /lists.json
   def index
-    @lists = List.all
+    @lists = List.paginate(page: params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

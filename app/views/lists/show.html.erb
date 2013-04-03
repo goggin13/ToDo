@@ -8,7 +8,7 @@
 <% if current_user == @list.user %>
 
   <p>
-    <%= link_to 'Edit List', @list %> | 
+    <%= link_to 'Edit List', edit_list_path(@list) %> | 
     <%= link_to 'Destroy', @list, method: :delete, data: { confirm: 'Are you sure?' } %>
   </p>
 

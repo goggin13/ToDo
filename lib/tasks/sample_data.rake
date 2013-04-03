@@ -7,7 +7,7 @@ namespace :db do
                    password_confirmation: "password")
     end
     User.all.each do |user|
-      5.times { user.lists.create! title: Faker::Company.bs }
+      10.times { user.lists.create! title: Faker::Company.bs }
     end
     List.all.each do |list|
       10.times { list.tasks.create! description: Faker::Lorem.sentence(10) }
